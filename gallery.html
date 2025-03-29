@@ -5,26 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerij - Club Paradise</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
 
     <header>
         <h1>Galerij</h1>
         <nav>
-            <a href="index.html" class="btn">Home</a>
-            <a href="info.html" class="btn">Meer Info</a>
-            <a href="contact.html" class="btn">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="info.html">Meer Info</a>
+            <a href="gallery.html" class="active">Galerij</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <section class="gallery">
         <h2>Onze Club in Actie</h2>
         <div class="gallery-container">
-            <img src="images/club1.jpg" alt="Club sfeer 1">
-            <img src="images/club2.jpg" alt="Club sfeer 2">
-            <img src="images/club3.jpg" alt="Club sfeer 3">
+            <img src="images/club1.jpg" alt="Club sfeer 1" onclick="openLightbox(this)">
+            <img src="images/club2.jpg" alt="Club sfeer 2" onclick="openLightbox(this)">
+            <img src="images/club3.jpg" alt="Club sfeer 3" onclick="openLightbox(this)">
         </div>
     </section>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
 
     <footer>
         <p>© 2025 Club Paradise | FiveM Stripclub</p>
